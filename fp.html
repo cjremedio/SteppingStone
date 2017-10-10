@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<script type="text/javascript" src="registration.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.13.1/jquery.validate.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<style type="text/css">
+  <style>
+.image{border-style: solid;
+    border-width: 5px;
+  height: 80px;
+  width:80px; 
+  margin-right:20px;
+}
+
+.genimg{
+  height: 40px;
+  width:50px; 
+  
+}
+
+.buttonimg:hover{
+  border: 5px solid;
+    color: red;
+}
+button{
+  width:120px;
+  margin-right:10px;
+  margin-left:10px;
+}
+
+
+.container-fluid{
+    background-image: url("fp.jpg");
+     width: 100%;
+      height:768px;
+    background-size: cover;
+      }
+
+/*=== 2. Anchor Link ===*/
+a {
+  color: blue;
+  transition: all ease-in-out 200ms;
+}
+a:hover {
+  color: #333333;
+  text-decoration: none;
+}
+
+/*=== 4. Main Form ===*/
+.login-form-1 {
+  max-width: 300px;
+  border-radius: 5px;
+  display: inline-block;
+}
+.main-login-form {
+  position: relative;
+}
+.login-form-1 .form-control {
+  border: 0;
+  box-shadow: 0 0 0;
+  border-radius: 0;
+  background: transparent;
+  color: #555555;
+  padding: 7px 0;
+  font-weight: bold;
+  height:auto;
+}
+.login-form-1 .form-control::-webkit-input-placeholder {
+  color: #999999;
+}
+.login-form-1 .form-control:-moz-placeholder,
+.login-form-1 .form-control::-moz-placeholder,
+.login-form-1 .form-control:-ms-input-placeholder {
+  color: #999999;
+}
+.login-form-1 .form-group {
+  margin-bottom: 0;
+  border-bottom: 2px solid #efefef;
+  padding-right: 20px;
+  position: relative;
+}
+.login-form-1 .form-group:last-child {
+  border-bottom: 0;
+}
+.login-group {
+  background: #ffffff;
+  color: #999999;
+  border-radius: 8px;
+  padding: 10px 20px;
+}
+.login-group-checkbox {
+  padding: 5px 0;
+}
+/*=== 5. Login Button ===*/
+.login-form-1 .login-button {
+  position: absolute;
+  right: -25px;
+  top: 50%;
+  background: #ffffff;
+  color: #999999;
+  padding: 11px 0;
+  width: 50px;
+  height: 50px;
+  margin-top: -25px;
+  border: 5px solid #efefef;
+  border-radius: 50%;
+  transition: all ease-in-out 500ms;
+}
+.login-form-1 .login-button:hover {
+  color: #555555;
+  transform: rotate(450deg);
+}
+.login-form-1 .login-button.clicked {
+  color: #555555;
+}
+.login-form-1 .login-button.clicked:hover {
+  transform: none;
+}
+.login-form-1 .login-button.clicked.success {
+  color: #2ecc71;
+}
+.login-form-1 .login-button.clicked.error {
+  color: #e74c3c;
+}
+/*=== 6. Form Invalid ===*/
+label.form-invalid {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  display: block;
+  margin-top: -25px;
+  padding: 7px 9px;
+  background: #777777;
+  color: #ffffff;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 11px;
+}
+label.form-invalid:after {
+  top: 100%;
+  right: 10px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: transparent;
+  border-top-color: #777777;
+  border-width: 6px;
+}
+/*=== 7. Form - Main Message ===*/
+.login-form-main-message {
+  background: #ffffff;
+  color: green;
+  border-left: 3px solid transparent;
+  border-radius: 3px;
+  margin-bottom: 8px;
+  font-weight: bold;
+  height: 0;
+  padding: 0 20px 0 17px;
+  opacity: 0;
+  transition: all ease-in-out 200ms;
+}
+.login-form-main-message.show {
+  height: auto;
+  opacity: 1;
+  padding: 10px 20px 10px 17px;
+}
+.login-form-main-message.success {
+  border-left-color: #2ecc71;
+}
+.login-form-main-message.error {
+  border-left-color: #e74c3c;
+}
+
+
+/* hover style just for information */
+label:hover:before {
+  border: 1px solid #f6f6f6 !important;
+}
+
+/*=== 9. Misc ===*/
+.logo {
+  padding: 15px 0;
+  font-size: 25px;
+  color: #ea1465;
+  font-weight: bold;
+}
+
+</style>
+</head>
+<body>
+<div class="container-fluid">
+<!-- FORGOT PASSWORD FORM -->
+<div class="text-center" style="padding:50px 0; margin-top: 245px; margin-left: 60px; font-family: Varela Round;">
+  <div class="logo">forgot password</div>
+  <!-- Main Form -->
+  <div class="login-form-1">
+    <form id="forgot-password-form" class="text-left">
+      <div class="etc-login-form">
+        <p>Reset your password.</p>
+      </div>
+      <div class="login-form-main-message"></div>
+      <div class="main-login-form">
+        <div class="login-group">
+          <div class="form-group">
+            <label for="fp_email" class="sr-only">Email address</label>
+            <input type="text" class="form-control" id="fp_email" name="fp_email" placeholder="email address">
+          </div>
+        </div>
+        <button type="submit" class="login-button"><i class="glyphicon glyphicon-chevron-down"></i></button>
+      </div>
+      <div class="etc-login-form">
+        <p>already have an account? <a href="proj_login.html">login here</a></p>
+        <p>new user? <a href="proj_login.html">create new account</a></p>
+      </div>
+    </form>
+  </div>
+  <!-- end:Main Form -->
+</div>
+</div>
+
+<script>
+(function($) {
+  "use strict";
+  
+  // Options for Message
+  //----------------------------------------------
+  var options = {
+    'btn-loading': '<i class="fa fa-spinner fa-pulse"></i>',
+    'btn-success': '<i class="fa fa-check"></i>',
+    'btn-error': '<i class="fa fa-remove"></i>',
+    'msg-success': 'All Good! Redirecting...',
+    'msg-error': 'Wrong login credentials!',
+    'useAJAX': true,
+  };
+
+  
+
+  // Forgot Password Form
+  //----------------------------------------------
+  // Validation
+  $("#forgot-password-form").validate({
+    rules: {
+      fp_email: "required",
+    },
+    errorClass: "form-invalid"
+  });
+  
+  // Form Submission
+  $("#forgot-password-form").submit(function() {
+    remove_loading($(this));
+    
+    if(options['useAJAX'] == true)
+    {
+      // Dummy AJAX request (Replace this with your AJAX code)
+      // If you don't want to use AJAX, remove this
+      dummy_submit_form($(this));
+    
+      // Cancel the normal submission.
+      // If you don't want to use AJAX, remove this
+      return false;
+    }
+  });
+
+  // Loading
+  //----------------------------------------------
+  function remove_loading($form)
+  {
+    $form.find('[type=submit]').removeClass('error success');
+    $form.find('.login-form-main-message').removeClass('show error success').html('');
+  }
+
+  function form_loading($form)
+  {
+    $form.find('[type=submit]').addClass('clicked').html(options['btn-loading']);
+  }
+  
+  function form_success($form)
+  {
+    $form.find('[type=submit]').addClass('success').html(options['btn-success']);
+    $form.find('.login-form-main-message').addClass('show success').html(options['msg-success']);
+  }
+
+  function form_failed($form)
+  {
+    $form.find('[type=submit]').addClass('error').html(options['btn-error']);
+    $form.find('.login-form-main-message').addClass('show error').html(options['msg-error']);
+  }
+
+  // Dummy Submit Form (Remove this)
+  //----------------------------------------------
+  // This is just a dummy form submission. You should use your AJAX function or remove this function if you are not using AJAX.
+  function dummy_submit_form($form)
+  {
+    if($form.valid())
+    {
+      form_loading($form);
+      
+      setTimeout(function() {
+        form_success($form);
+      }, 1000);
+    }
+  }
+  
+})(jQuery);
+</script>
+</body>
+
+</html>

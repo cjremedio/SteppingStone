@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<style>
+
+.container-fluid{
+	background-image: url("background/game_background.jpg");
+	width: 100%;
+    height:768px;
+    background-size: cover;
+}
+
+.imgborder {border-style: solid;
+    border-width: 2px;
+	height: 80px;
+	width:90px;	
+	margin-top: 2px;
+	margin-right:20px;
+}
+
+
+button{
+	width:120px;
+	margin-right:10px;
+}
+
+
+
+</style>
+</head>
+
+
+<body>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div style="margin-top:3%; margin-left: 3%" class=" col"> 
+   				<ul class="nav navbar-nav">
+       				<li class="dropdown">
+          			<a href="#" class="dropdown-toggle" data-toggle="dropdown">Wenela<span class="glyphicon glyphicon-user pull-right"></span></a>
+          		<ul class="dropdown-menu">
+            		<li><a href="proj_profile.html">Profile<span class="glyphicon glyphicon-cog pull-right"></span></a>
+            		</li>
+            		<li class="divider">
+            		</li>
+           			<li><a href="proj_login.html">Sign Out <span class="glyphicon glyphicon-log-out pull-right"></span></a>
+           			</li> 
+          		</ul>
+        			</li>
+      			</ul>
+			</div>
+				
+			<div class="col" style="margin-top:2%;"><h3 style="margin-left: 55%"><b> TOTAL POINTS  </b></h3></div>
+			</div>
+
+		<div class="row">
+			<div class="col-md-6" style="margin-top:2%; margin-left:33%;" ><img src="labels/picid.png"></div>
+			</div>
+
+		<div class="row">
+			<div class="col-md-6" style=" margin-left:29%;" ><h5><b>Instructions:</b> Name the picture and click on the right button for your answer.</h5>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-4" style=" margin-top:1%; margin-left:28%;">
+				<table>
+					<tr>
+						<td><p><strong>1.</p></td>
+						<td><img class="imgborder" src="img/blue_bird.png"></td>
+						<td><button type="button" class="btn btn-danger" onclick="wanswer()" id="mpoints1"><strong>Dog</button></td>
+						<td><button type="button" class="btn btn-danger" onclick="canswer1()" id="ppoints"><strong>Bird</button></td>
+						<td><button type="button" class="btn btn-danger" onclick="wanswer()" id="mpoints2"><strong>Cat</button></td>
+					</tr>
+					<tr>
+						<td><p><strong>2.</p></td>
+						<td><img class="imgborder" src="img/potato.jpg"></td>
+						<td><button type="button" class="btn btn-danger potato" onclick="wanswer()" id="mpoints3"><strong>Squash</button></td>
+						<td><button type="button" class="btn btn-danger potato" onclick="wanswer()" id="mpoints4"><strong>Tomato</button></td>
+						<td><button type="button" class="btn btn-danger potato" onclick="canswer2()" id="ppoints"><strong>Potato</button></td>
+					</tr>
+					<tr>
+						<td><p><strong>3.</p></td>
+						<td><img class="imgborder" src="img/tree.jpg"></td>
+						<td><button type="button" class="btn btn-danger" onclick="canswer3()" id="ppoints"><strong>Tree</button></td>
+						<td><button type="button" class="btn btn-danger" onclick="wanswer()" id="mpoints5"><strong>Mountain</button></td>
+						<td><button type="button" class="btn btn-danger" onclick="wanswer()" id="mpoints6"><strong>Grass</button></td>
+					</tr>
+					<tr>
+						<td><p><strong>4.</p></td>
+						<td><img class="imgborder" src="img/girl2.png"></td>
+						<td><button type="button" class="btn btn-danger" onclick="canswer4()" id="ppoints"><strong>Girl</button></td>
+						<td><button type="button" class="btn btn-danger" onclick="wanswer()" id="mpoints7"><strong>Boy</button></td>
+						<td><button type="button" class="btn btn-danger" onclick="wanswer()" id="mpoints8"><strong>Dog</button></td>
+					</tr>
+					<tr>
+						<td><p><strong>5.</p></td>
+						<td><img class="imgborder" src="img/apple.jpg"></td>
+						<td><button type="button" class="btn btn-danger" onclick="wanswer()" id="mpoints9"><strong>Strawberry</button></td>
+						<td><button type="button" class="btn btn-danger" onclick="wanswer()" id="mpoints0"><strong>Orange</button></td>
+						<td><button type="button" class="btn btn-danger" onclick="canswer5()" id="ppoints"><strong>Apple</button></td>
+					</tr>
+				</table>
+			</div>
+			
+			<div class="col-md-1" style="margin-top:5.3%; margin-left:24%;"> <img style="display:none;" src="img/points.gif" id="points">
+			</div>
+			
+		<div class="row">
+			<div class="col-md-12">
+				<div style=" margin-top:0px; margin-left:1060px; " >
+					<button type="button" class="btn btn-success" onclick="tryAgain()"><strong>Try Again</button>
+					<button type="button" class="btn btn-primary" onclick="location.href='homepage.html'"><strong>Home</button>
+				</div>
+			</div>
+		</div>
+		
+		</div>
+		<div class="row">
+			<div class="col-md-12" style="margin-top: 50px">
+  				<center>
+  				<p><strong>Created by: Christine Joy Camota & Siegred Deanne Blanco</strong></p>
+  				<p>ICT 141 Project (1st Semester 2017)  |  Instructor: Mr. Don Bhrayan M. Singh</p>
+  				</center>
+  			</div>
+  		</div>
+
+		<audio id="correct">
+	  		<source src="audio/correct.mp3" type="audio/mpeg">
+	  		Your browser does not support the audio element.
+		</audio>
+		<audio id="wrong">
+	  		<source src="audio/wrong.mp3" type="audio/mpeg">
+	  		Your browser does not support the audio element.
+		</audio>	
+
+		</div>	
+			<audio autoplay loop>
+				<source src="audio/music3.mp3">
+			</audio>
+
+<script>
+var c = document.getElementById("correct"); 
+var x = document.getElementById("wrong"); 
+var item = document.getElementById("points");
+var i = 0;
+var y = x.getElementsByTagName("button");
+
+function tryAgain() { 
+	document.getElementById("mpoints1").disabled = false;
+	document.getElementById("mpoints2").disabled = false;
+	document.getElementById("mpoints3").disabled = false;
+	document.getElementById("mpoints4").disabled = false;
+	document.getElementById("mpoints5").disabled = false;
+	document.getElementById("mpoints6").disabled = false;
+	document.getElementById("mpoints7").disabled = false;
+	document.getElementById("mpoints8").disabled = false;
+	document.getElementById("mpoints9").disabled = false;
+	document.getElementById("mpoints0").disabled = false;
+}
+function canswer1() { 
+
+    c.play(); 
+    item.style.display='block';
+     
+    var mpoint = document.getElementById("mpoints1");
+    var mpoint2 = document.getElementById("mpoints2");
+     mpoint.disabled = true;
+     mpoint2.disabled= true; 
+	 
+}
+function canswer2() { 
+
+    c.play(); 
+    item.style.display='block';
+     
+    var mpoint = document.getElementById("mpoints3");
+    var mpoint2 = document.getElementById("mpoints4");
+     mpoint.disabled = true;
+     mpoint2.disabled= true; 
+	 
+}
+function canswer3() { 
+
+    c.play(); 
+    item.style.display='block';
+     
+    var mpoint = document.getElementById("mpoints5");
+    var mpoint2 = document.getElementById("mpoints6");
+     mpoint.disabled = true;
+     mpoint2.disabled= true; 
+	 
+}
+function canswer4() { 
+
+    c.play(); 
+    item.style.display='block';
+     
+    var mpoint = document.getElementById("mpoints7");
+    var mpoint2 = document.getElementById("mpoints8");
+     mpoint.disabled = true;
+     mpoint2.disabled= true; 
+	 
+}
+function canswer5() { 
+var classnm = document.getElementsByClassName("bird"); 
+    c.play(); 
+    item.style.display='block';
+     
+    var mpoint = document.getElementById("mpoints9");
+    var mpoint2 = document.getElementById("mpoints0");
+     mpoint.disabled = true;
+     mpoint2.disabled= true; 
+	 
+}
+function wanswer() { 
+    x.play();  
+    item.style.display = 'none' ; 
+} 
+
+ 
+</script>
+</body>
+</html>
